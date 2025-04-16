@@ -1,4 +1,5 @@
-  
+import heroImage from './assets/thirstys-homepage-image.png';
+
   const elementDefinitions = { 
     button: [
       { id: 'menuButton',
@@ -11,7 +12,8 @@
     ],
     h1: [
       { id: 'heroHeading',
-        className: 'hero-heading' }
+        className: 'hero-heading',
+        textContent: 'Thirsty\'s' }
     ],
     h2: [
       { id: 'welcomeHeading',
@@ -21,7 +23,7 @@
     img: [
       { id: 'heroImage',
         className: 'hero-image',
-        src: 'assets/thirstys-homepage-image.png',
+        src: heroImage,
         alt: "Thirsty's signature drink background" }
     ],
     p: [
