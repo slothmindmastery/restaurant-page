@@ -20,4 +20,9 @@ const buildElements = (definitions) => {
   return elements;
 };
 
-export { buildElements };
+function clearContent() {
+  const content = document.getElementById('content');
+  content.innerHTML = '';
+}
+
+export { buildElements, clearContent };

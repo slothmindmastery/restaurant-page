@@ -1,71 +1,71 @@
-import heroImage from './assets/thirstys-homepage-image.png';
+import homepageHeroImage from './assets/thirstys-homepage-image.png';
 import { buildElements } from './helpers.js'
 
   const elementDefinitions = { 
     button: [
-      { id: 'menuButton',
-        className: 'menu-button',
+      { id: 'homepageHeroMenuButton',
+        className: 'hero-button',
         textContent: 'Menu' }
     ],
     div: [
-      { id: 'heroText',
-        className: 'hero-text' }
+      { id: 'homepageHeroTextContainer',
+        className: 'hero-text-container' }
     ],
     h1: [
-      { id: 'heroHeading',
+      { id: 'homepageHeroHeading',
         className: 'hero-heading',
-        textContent: 'Thirsty\'s' }
+        textContent: "Thirsty's" }
     ],
     h2: [
-      { id: 'welcomeHeading',
-        className: 'welcome-heading',
+      { id: 'homepageWelcomeHeading',
+        className: 'section-heading',
         textContent: "Welcome to Thirsty's" }
     ],
     img: [
-      { id: 'heroImage',
+      { id: 'homepageHeroImage',
         className: 'hero-image',
-        src: heroImage,
+        src: homepageHeroImage,
         alt: "Thirsty's signature drink background" }
     ],
     p: [
-      { id: 'heroStrapline',
+      { id: 'homepageHeroStrapline',
         className: 'hero-strapline',
         textContent: 'SIGNATURE SOFT DRINKS' },
-      { id: 'welcomeText',
-        className: 'welcome-text',
+      { id: 'homepageWelcomeInformationText',
+        className: 'information-text',
         textContent: "Bored of basic? So are we. At Thirsty's, we mix magic by the glass — bold blends, wild colors, and flavours you didn't know you were craving. Foke, Spritsey, Rainbow Rush… they're not just drinks, they're an experience. Retro vibes, fizzy feels, and a menu full of “wait, what is THAT?!” Come thirsty, leave grinning." }
     ],
     section: [
-      { id: 'hero',
+      { id: 'homepageHeroSection',
         className: 'hero' },
-      { id: 'aboutThirstys',
-        className: 'about-thirstys' }
-    ],
+      { id: 'homepageAboutThirstysSection',
+        className: 'information-section' }
+    ]
   };
 
   const renderHomepage = () => {
     const elements = buildElements(elementDefinitions);
     const content = document.getElementById('content');
 
-    elements.heroText.append(
-      elements.heroHeading,
-      elements.heroStrapline,
-      elements.menuButton
+    elements.homepageHeroTextContainer.append(
+      elements.homepageHeroHeading,
+      elements.homepageHeroStrapline,
+      elements.homepageHeroMenuButton
     );
 
-    elements.hero.append(
-      elements.heroImage,
-      elements.heroText
+    elements.homepageHeroSection.append(
+      elements.homepageHeroImage,
+      elements.homepageHeroTextContainer
     );
 
-    elements.aboutThirstys.append(
-      elements.welcomeHeading,
-      elements.welcomeText
+    elements.homepageAboutThirstysSection.append(
+      elements.homepageWelcomeHeading,
+      elements.homepageWelcomeInformationText
     );
 
     content.append(
-      elements.hero,
-      elements.aboutThirstys
+      elements.homepageHeroSection,
+      elements.homepageAboutThirstysSection
     );
 
     return elements;

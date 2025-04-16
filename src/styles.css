@@ -1,4 +1,4 @@
-/* Global Reset & Base Styles */
+/* Base Reset & Global Styles */
 *,
 *::before,
 *::after {
@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fefefe;
   color: #333;
   line-height: 1.6;
@@ -15,6 +15,21 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.information-text {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto 2rem auto;
 }
 
 /* Hero Section */
@@ -33,9 +48,10 @@ html {
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
+  transition: filter 0.4s ease; /* ⬅️ Add this here */
 }
 
-.hero-text {
+.hero-text-container {
   position: absolute;
   top: 15%;
   left: 50%;
@@ -48,18 +64,18 @@ html {
   opacity: 0;
 }
 
-.hero-text h1 {
+.hero-heading {
   font-size: clamp(2.5rem, 8vw, 6rem);
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
 }
 
-.hero-text p {
+.hero-strapline {
   font-size: clamp(1rem, 3vw, 1.5rem);
   margin-bottom: 1.5rem;
 }
 
-.hero-text button {
+.hero-button {
   background-color: #00c2cb;
   color: #fff;
   border: none;
@@ -70,31 +86,24 @@ html {
   transition: background-color 0.3s ease;
 }
 
-.hero-text button:hover {
+.hero-button:hover {
   background-color: #009aa2;
 }
 
-.hero-text button:focus {
+.hero-button:focus {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-/* About Section */
-.about-thirstys {
+.hero:hover .hero-image {
+  filter: brightness(85%);
+}
+
+/* General Section Styling */
+.information-section {
   max-width: 80%;
   margin: 3rem auto;
   padding: 0 1rem;
-  text-align: center;
-}
-
-.about-thirstys h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-thirstys p {
-  font-size: 1.1rem;
-  color: #555;
 }
 
 /* Fade In Animation */
