@@ -76,6 +76,7 @@ import { buildElements } from './helpers.js'
   };
 
   const renderAboutPage = () => {
+    window.scrollTo(0, 0);
     const elements = buildElements(elementDefinitions);
     const content = document.getElementById('content');
 
