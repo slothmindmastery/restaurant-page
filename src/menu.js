@@ -1,77 +1,122 @@
-import heroImage from './assets/thirstys-about-image.png';
-import familyImage from './assets/thirstys-family.png';
-import qualityImage from './assets/thirstys-quality.png';
+import heroImage from './assets/menu/hero.png';
+import fokeImage from './assets/menu/foke.png';
+import spritseyImage from './assets/menu/spritsey.png';
+import blueBubblerImage from './assets/menu/blue-bubbler.png';
+import lemokolaImage from './assets/menu/lemokola.png';
+import purpPopImage from './assets/menu/purp-pop.png';
+import cherryChugImage from './assets/menu/cherry-chug.png';
+import rainbowRushImage from './assets/menu/rainbow-rush.png';
 import { buildElements } from './helpers.js'
 
   const elementDefinitions = { 
-    blockquote: [
-      { id: 'aboutFamilyBlockquote',
-        className: 'information-blockquote',
-        textContent: "If you can pour a good drink, make someone smile, or serve a glass full of joy — you'll always have a place in the world." }
-    ],
-    cite: [
-      { id: 'aboutFamilyBlockquoteCite',
-        className: 'information-blockquote-cite',
-        textContent: "Thirsty's Nana" }
-    ],
     div: [
-      { id: 'aboutHeroTextContainer',
-        className: 'hero-text-container' }
+      { id: 'menuHeroTextContainer',
+        className: 'hero-text-container' },
+      { id: 'menuFokeDrinkCard',
+        className: 'drink-card' },
+      { id: 'menuSpritseyDrinkCard',
+        className: 'drink-card' },
+      { id: 'menuBlueBubblerDrinkCard',
+        className: 'drink-card' },
+      { id: 'menuLemokolaDrinkCard',
+        className: 'drink-card' },
+      { id: 'menuPurpPopDrinkCard',
+        className: 'drink-card' },
+      { id: 'menuCherryChugDrinkCard',
+        className: 'drink-card' },
+      { id: 'menuRainbowRushDrinkCard',
+        className: 'drink-card' }
     ],
     h1: [
-      { id: 'aboutHeroHeading',
+      { id: 'menuHeroHeading',
         className: 'hero-heading',
-        textContent: 'About Us' }
+        textContent: 'Our Menu' }
     ],
-    h2: [
-      { id: 'aboutFamilyHeading',
-        className: 'section-heading',
-        textContent: "Family" },
-      { id: 'aboutQualityHeading',
-        className: 'section-heading',
-        textContent: "Family" }
+    h3: [
+      { id: 'menuFokeHeading',
+        classsName: 'menu-heading',
+        textContent: 'Foke' },
+      { id: 'menuSpritseyHeading',
+        classsName: 'menu-heading',
+        textContent: 'Spritsey' },
+      { id: 'menuBlueBubblerHeading',
+        classsName: 'menu-heading',
+        textContent: 'Blue Bubbler' },
+      { id: 'menuLemokolaHeading',
+        classsName: 'menu-heading',
+        textContent: 'Sharp lemonade and smooth cola in a perfect 50/50 pour. A zesty, dark-citrus dance.' },
+      { id: 'menuPurpPopHeading',
+        classsName: 'menu-heading',
+        textContent: 'Purp Pop' },
+      { id: 'menuCherryChugHeading',
+        classsName: 'menu-heading',
+        textContent: 'Cherry Chug' },
+      { id: 'menuRainbowRushHeading',
+        classsName: 'menu-heading',
+        textContent: 'Rainbow Rush' }
     ],
     img: [
-      { id: 'aboutHeroImage',
+      { id: 'menuHeroImage',
         className: 'hero-image',
         src: heroImage,
-        alt: "Everyone having an amazing time at Thirstys's" },
-      { id: 'aboutFamilyImage',
-        className: 'information-image',
-        src: familyImage,
-        alt: "TODO!!!" },
-      { id: 'aboutQualityImage',
-        className: 'information-image',
-        src: qualityImage,
-        alt: "TODO!!!" }
+        alt: "All the drinks lined up at the bar at Thirstys's" },
+      { id: 'menuFokeImage',
+        className: 'menu-image',
+        src: fokeImage,
+        alt: 'foke' },
+      { id: 'menuSpritseyImage',
+        className: 'menu-image',
+        src: spritseyImage,
+        alt: 'Spritsey' },
+      { id: 'menuBlueBubblerImage',
+        className: 'menu-image',
+        src: blueBubblerImage,
+        alt: 'Blue Bubbler' },
+      { id: 'menuLemokolaImage',
+        className: 'menu-image',
+        src: lemokolaImage,
+        alt: 'LemoKola' },
+      { id: 'menuPurpPopImage',
+        className: 'menu-image',
+        src: purpPopImage,
+        alt: 'Purp Pop' },
+      { id: 'menuCherryChugImage',
+        className: 'menu-image',
+        src: cherryChugImage,
+        alt: 'Cherry Chug' },
+      { id: 'menuRainbowRushImage',
+        className: 'menu-image',
+        src: rainbowRushImage,
+        alt: 'Rainbow Rush' }
     ],
     p: [
-      { id: 'aboutFamilyInformationTextPara1',
-        className: 'information-text',
-        textContent: "Bedford, England, 2024. It started with a little boy and a big idea: open a bar called Thirsty's, where the drinks are wild, the flavours are fun, and anything is possible — like mixing Fanta and Coke and calling it Foke. That spark of imagination lit the fuse for what became Thirsty's: a family-led soda bar built on bold drinks and good times." },
-      { id: 'aboutFamilyInformationTextPara2',
-        className: 'information-text',
-        textContent: "Our recipe? It's simple. \"Mix it, love it, serve it.\" Every fizzy creation is handcrafted with heart — from Spritsey to Purp Pop — and our family's still behind the counter, still laughing at the same jokes, still chasing that first-day feeling." },
-      { id: 'aboutQualityInformationTextPara1',
-        className: 'information-text',
-        textContent: "At Thirsty's, we take quality very seriously. That's why we open only the finest cans of Fanta and Coke with great care and pour them — expertly, might we add — into one glass, at just the right angle. That's Foke, baby." },
-      { id: 'aboutQualityInformationTextPara2',
-        className: 'information-text',
-        textContent: "We're talking premium carbonated beverages here. Each drink is lovingly assembled using the highest-grade ice our freezer trays can produce, and garnished with real fruit (that someone definitely sliced, probably this morning)." },
-      { id: 'aboutQualityInformationTextPara3',
-        className: 'information-text',
-        textContent: "Our toppings? Bought from actual shops. Our whipped cream? Sprayed with flair. And our straws? Bent at exactly the right jaunty angle for optimal sipping." },
-      { id: 'aboutQualityInformationTextPara4',
-        className: 'information-text',
-        textContent: "No gimmicks. No secrets. Just pure, bubbly brilliance — cracked open and poured fresh, one can at a time." },
+      { id: 'menuFokeInformation',
+        classsName: 'menu-information',
+        textContent: 'The classic clash — Fanta meets Coke in a fizzy, two-tone explosion. Served with an orange slice and cherry twist.' },
+      { id: 'menuSpritseyInformation',
+        classsName: 'menu-information',
+        textContent: 'Zingy Sprite blended with a splash of tropical juice and a dash of mint. Sparkling and refreshing with a green glow.' },
+      { id: 'menuBlueBubblerInformation',
+        classsName: 'menu-information',
+        textContent: 'Electric blue raspberry soda with popping candy fizz. A bubblegum-sweet blast from the past.' },
+      { id: 'menuLemokolaInformation',
+        classsName: 'menu-information',
+        textContent: 'LemoKola' },
+      { id: 'menuPurpPopInformation',
+        classsName: 'menu-information',
+        textContent: 'Purp Pop' },
+      { id: 'menuCherryChugInformation',
+        classsName: 'menu-information',
+        textContent: 'Grape soda meets vanilla cream for a smooth and vibrant treat. Topped with a swirl of whipped foam.' },
+      { id: 'menuRainbowRushInformation',
+        classsName: 'menu-information',
+        textContent: 'A layered slushie of all your favorite sodas — lemon, lime, cherry, cola, and orange. Stir it or sip it as-is.' }
     ],
     section: [
-      { id: 'aboutHeroSection',
-        className: 'hero' },
-      { id: 'aboutFamilySection',
-        className: 'information-section' },
-      { id: 'aboutQualitySection', 
-        className: 'information-section' }
+      { id: 'menuHeroSection',
+        className: 'hero-section' },
+      { id: 'menuGridSection',
+        className: 'grid-section' },
     ]
   };
 
@@ -79,40 +124,70 @@ import { buildElements } from './helpers.js'
     const elements = buildElements(elementDefinitions);
     const content = document.getElementById('content');
 
-    elements.aboutHeroTextContainer.append(
-      elements.aboutHeroHeading,
+    elements.menuHeroTextContainer.append(
+      elements.menuHeroHeading
     );
 
-    elements.aboutHeroSection.append(
-      elements.aboutHeroImage,
-      elements.aboutHeroTextContainer
+    elements.menuHeroSection.append(
+      elements.menuHeroImage,
+      elements.menuHeroTextContainer
     );
 
-    elements.aboutFamilyBlockquote.append(
-      elements.aboutFamilyBlockquoteCite
+    elements.menuFokeDrinkCard.append(
+      elements.menuFokeImage,
+      elements.menuFokeHeading,
+      elements.menuFokeInformation
     );
 
-    elements.aboutFamilySection.append(
-      elements.aboutFamilyHeading,
-      elements.aboutFamilyInformationTextPara1,
-      elements.aboutFamilyInformationTextPara2,
-      elements.aboutFamilyBlockquote,
-      elements.aboutFamilyImage
+    elements.menuSpritseyDrinkCard.append(
+      elements.menuSpritseyImage,
+      elements.menuSpritseyHeading,
+      elements.menuSpritseyInformation
     );
 
-    elements.aboutQualitySection.append(
-      elements.aboutQualityHeading,
-      elements.aboutQualityInformationTextPara1,
-      elements.aboutQualityInformationTextPara2,
-      elements.aboutQualityInformationTextPara3,
-      elements.aboutQualityInformationTextPara4,
-      elements.aboutQualityImage
+    elements.menuBlueBubblerDrinkCard.append(
+      elements.menuBlueBubblerImage,
+      elements.menuBlueBubblerHeading,
+      elements.menuBlueBubblerInformation
+    );
+
+    elements.menuLemokolaDrinkCard.append(
+      elements.menuLemokolaImage,
+      elements.menuLemokolaHeading,
+      elements.menuLemokolaInformation
+    );
+
+    elements.menuPurpPopDrinkCard.append(
+      elements.menuPurpPopImage,
+      elements.menuPurpPopHeading,
+      elements.menuPurpPopInformation
+    );
+
+    elements.menuCherryChugDrinkCard.append(
+      elements.menuCherryChugImage,
+      elements.menuCherryChugHeading,
+      elements.menuCherryChugInformation
+    );
+
+    elements.menuCherryChugDrinkCard.append(
+      elements.menuRainbowRushImage,
+      elements.menuRainbowRushHeading,
+      elements.menuRainbowRushInformation
+    );
+
+    elements.menuGridSection.append(
+      elements.menuFokeDrinkCard,
+      elements.menuSpritseyDrinkCard,
+      elements.menuBlueBubblerDrinkCard,
+      elements.menuLemokolaDrinkCard,
+      elements.menuPurpPopDrinkCard,
+      elements.menuCherryChugDrinkCard,
+      elements.menuRainbowRushDrinkCard,
     );
 
     content.append(
-      elements.aboutHeroSection,
-      elements.aboutFamilySection,
-      elements.aboutQualitySection
+      elements.menuHeroSection,
+      elements.menuGridSection,
     );
 
     return elements;

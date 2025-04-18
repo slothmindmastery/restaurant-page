@@ -1,6 +1,6 @@
-import heroImage from './assets/thirstys-about-image.png';
-import familyImage from './assets/thirstys-family.png';
-import qualityImage from './assets/thirstys-quality.png';
+import heroImage from './assets/about/hero.png';
+import familyImage from './assets/about/family.png';
+import qualityImage from './assets/about/quality.png';
 import { buildElements } from './helpers.js'
 
   const elementDefinitions = { 
@@ -43,7 +43,7 @@ import { buildElements } from './helpers.js'
       { id: 'aboutQualityImage',
         className: 'information-image',
         src: qualityImage,
-        alt: "TODO!!!" }
+        alt: "Coke and Fanta being diligently poured to mix Foke" }
     ],
     p: [
       { id: 'aboutFamilyInformationTextPara1',

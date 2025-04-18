@@ -1,74 +1,74 @@
-import homepageHeroImage from './assets/thirstys-homepage-image.png';
+import heroImage from './assets/home/hero.png';
 import { buildElements } from './helpers.js'
 
   const elementDefinitions = { 
     button: [
-      { id: 'homepageHeroMenuButton',
+      { id: 'homeHeroMenuButton',
         className: 'hero-button',
         textContent: 'Menu' }
     ],
     div: [
-      { id: 'homepageHeroTextContainer',
+      { id: 'homeHeroTextContainer',
         className: 'hero-text-container' }
     ],
     h1: [
-      { id: 'homepageHeroHeading',
+      { id: 'homeHeroHeading',
         className: 'hero-heading',
         textContent: "Thirsty's" }
     ],
     h2: [
-      { id: 'homepageWelcomeHeading',
+      { id: 'homeWelcomeHeading',
         className: 'section-heading',
         textContent: "Welcome to Thirsty's" }
     ],
     img: [
-      { id: 'homepageHeroImage',
+      { id: 'homeHeroImage',
         className: 'hero-image',
-        src: homepageHeroImage,
+        src: heroImage,
         alt: "Thirsty's signature drink background" }
     ],
     p: [
-      { id: 'homepageHeroStrapline',
+      { id: 'homeHeroStrapline',
         className: 'hero-strapline',
         textContent: 'SIGNATURE SOFT DRINKS' },
-      { id: 'homepageWelcomeInformationText',
+      { id: 'homeWelcomeInformationText',
         className: 'information-text',
         textContent: "Bored of basic? So are we. At Thirsty's, we mix magic by the glass — bold blends, wild colors, and flavours you didn't know you were craving. Foke, Spritsey, Rainbow Rush… they're not just drinks, they're an experience. Retro vibes, fizzy feels, and a menu full of “wait, what is THAT?!” Come thirsty, leave grinning." }
     ],
     section: [
-      { id: 'homepageHeroSection',
+      { id: 'homeHeroSection',
         className: 'hero' },
-      { id: 'homepageAboutThirstysSection',
+      { id: 'homeAboutThirstysSection',
         className: 'information-section' }
     ]
   };
 
-  const renderHomepage = () => {
+  const renderHomePage = () => {
     const elements = buildElements(elementDefinitions);
     const content = document.getElementById('content');
 
-    elements.homepageHeroTextContainer.append(
-      elements.homepageHeroHeading,
-      elements.homepageHeroStrapline,
-      elements.homepageHeroMenuButton
+    elements.homeHeroTextContainer.append(
+      elements.homeHeroHeading,
+      elements.homeHeroStrapline,
+      elements.homeHeroMenuButton
     );
 
-    elements.homepageHeroSection.append(
-      elements.homepageHeroImage,
-      elements.homepageHeroTextContainer
+    elements.homeHeroSection.append(
+      elements.homeHeroImage,
+      elements.homeHeroTextContainer
     );
 
-    elements.homepageAboutThirstysSection.append(
-      elements.homepageWelcomeHeading,
-      elements.homepageWelcomeInformationText
+    elements.homeAboutThirstysSection.append(
+      elements.homeWelcomeHeading,
+      elements.homeWelcomeInformationText
     );
 
     content.append(
-      elements.homepageHeroSection,
-      elements.homepageAboutThirstysSection
+      elements.homeHeroSection,
+      elements.homeAboutThirstysSection
     );
 
     return elements;
   };
 
-  export { renderHomepage };
+  export { renderHomePage };
