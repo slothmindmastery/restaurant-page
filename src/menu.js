@@ -34,25 +34,25 @@ import { buildElements } from './helpers.js'
     ],
     h3: [
       { id: 'menuFokeHeading',
-        classsName: 'menu-heading',
+        className: 'menu-heading',
         textContent: 'Foke' },
       { id: 'menuSpritseyHeading',
-        classsName: 'menu-heading',
+        className: 'menu-heading',
         textContent: 'Spritsey' },
       { id: 'menuBlueBubblerHeading',
-        classsName: 'menu-heading',
+        className: 'menu-heading',
         textContent: 'Blue Bubbler' },
       { id: 'menuLemokolaHeading',
-        classsName: 'menu-heading',
-        textContent: 'Sharp lemonade and smooth cola in a perfect 50/50 pour. A zesty, dark-citrus dance.' },
+        className: 'menu-heading',
+        textContent: 'LemoKola' },
       { id: 'menuPurpPopHeading',
-        classsName: 'menu-heading',
+        className: 'menu-heading',
         textContent: 'Purp Pop' },
       { id: 'menuCherryChugHeading',
-        classsName: 'menu-heading',
+        className: 'menu-heading',
         textContent: 'Cherry Chug' },
       { id: 'menuRainbowRushHeading',
-        classsName: 'menu-heading',
+        className: 'menu-heading',
         textContent: 'Rainbow Rush' }
     ],
     img: [
@@ -91,32 +91,32 @@ import { buildElements } from './helpers.js'
     ],
     p: [
       { id: 'menuFokeInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'The classic clash — Fanta meets Coke in a fizzy, two-tone explosion. Served with an orange slice and cherry twist.' },
       { id: 'menuSpritseyInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'Zingy Sprite blended with a splash of tropical juice and a dash of mint. Sparkling and refreshing with a green glow.' },
       { id: 'menuBlueBubblerInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'Electric blue raspberry soda with popping candy fizz. A bubblegum-sweet blast from the past.' },
       { id: 'menuLemokolaInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'LemoKola' },
       { id: 'menuPurpPopInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'Purp Pop' },
       { id: 'menuCherryChugInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'Grape soda meets vanilla cream for a smooth and vibrant treat. Topped with a swirl of whipped foam.' },
       { id: 'menuRainbowRushInformation',
-        classsName: 'menu-information',
+        className: 'menu-information',
         textContent: 'A layered slushie of all your favorite sodas — lemon, lime, cherry, cola, and orange. Stir it or sip it as-is.' }
     ],
     section: [
       { id: 'menuHeroSection',
         className: 'hero-section' },
       { id: 'menuGridSection',
-        className: 'grid-section' },
+        className: 'grid-section' }
     ]
   };
 
@@ -169,7 +169,7 @@ import { buildElements } from './helpers.js'
       elements.menuCherryChugInformation
     );
 
-    elements.menuCherryChugDrinkCard.append(
+    elements.menuRainbowRushDrinkCard.append(
       elements.menuRainbowRushImage,
       elements.menuRainbowRushHeading,
       elements.menuRainbowRushInformation
@@ -182,12 +182,12 @@ import { buildElements } from './helpers.js'
       elements.menuLemokolaDrinkCard,
       elements.menuPurpPopDrinkCard,
       elements.menuCherryChugDrinkCard,
-      elements.menuRainbowRushDrinkCard,
+      elements.menuRainbowRushDrinkCard
     );
 
     content.append(
       elements.menuHeroSection,
-      elements.menuGridSection,
+      elements.menuGridSection
     );
 
     return elements;
